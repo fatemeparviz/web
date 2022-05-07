@@ -1,0 +1,23 @@
+
+.Card{
+    background-color: #ececec;
+    margin: 60px 20px;
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgb(189, 189, 189);
+    cursor: pointer;
+}
+.Card h3{
+    color: darkblue;
+    margin: 10px 30px;
+    
+}
+.Card p{
+    background-color: rgb(43, 172, 43);
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px 30px;
+    padding: 2px;
+}

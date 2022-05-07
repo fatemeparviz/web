@@ -1,0 +1,23 @@
+.banner{
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+.ftext{
+    color: #ffffff;
+    position: absolute;
+    top: 170px;
+    left:40px;
+    font-size: 80px;
+
+}
+.stext{
+    color: #ffffff;
+    position: absolute;
+    top: 280px;
+    left:40px;
+    font-size: 50px;
+}
+.react{
+    color: rgb(241, 206, 110);
+}
