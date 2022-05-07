@@ -6,7 +6,7 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 5px 5px 10px rgb(189, 189, 189);
-    cursor: pointer;
+    
 }
 .Card h3{
     color: darkblue;
@@ -20,4 +20,26 @@
     font-size: 18px;
     margin: 10px 30px;
     padding: 2px;
+}
+.counter{
+    display: flex;
+    align-items: center;
+    border-top: 1px silver solid;
+
+}
+.counter span{
+    background-color: rgb(169, 153, 226);
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+}
+
+.counter img{
+    width: 20px;
+    cursor: pointer;
+    margin: 30px;
+}
+
+.deactive{
+    opacity: 0.5;
 }
