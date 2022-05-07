@@ -18,3 +18,10 @@
     outline: none;
     padding: 0 12px;
 }
+.search{
+    display: flex;
+    flex-direction: column;
+}
+.search span {
+    padding-top: 15px;
+}
