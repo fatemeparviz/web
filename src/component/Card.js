@@ -34,16 +34,16 @@ class Card extends Component {
 
     render() {
         const {image, name , price} = this.props
-        const {counter}=this.state
+        let {counter}=this.state
         return (
             <div className={Styles.Card}>
                 <img src={image}/>
                 <h3>{name}</h3>
-                <p>{price}</p>
+                <p>{price} { counter  ? ` *${counter}=  ${ counter * Number(price.split(" ")[0])} $`  : ""  }</p>
                 <div className={Styles.counter} >
                     <img src={up} alt="arrow" onClick={this.clickUp} />
                     <span>{counter}</span>
-                    <img src={down} alt="arrow" className={counter ? "" : Styles.deactive } onClick={this.clickDown} />
+                    <img src={down} alt="arrow" className={!counter &&  Styles.deactive } onClick={this.clickDown} />
                 </div>
             </div>
         );
