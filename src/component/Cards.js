@@ -7,17 +7,23 @@ import iphone13 from "../images/iphone13.jpg"
 import s21 from "../images/s21.jpg"
 
 class Cards extends Component {
+
+    constructor(){
+        super()
+        this.state={
+                userPhone:[
+                {id:1, image:iphone11 , name:"Iphone11" ,price:"600 $"},
+                {id:2,image:iphone12 , name:"Iphone12" ,price:"800 $"},
+                {id:3,image:iphone13 , name:"Iphone13" ,price:"950 $"},
+                {id:4,image:s21 , name:"S21 Ultra" ,price:"900 $"}
+        ]
+        }
+    }
+
     render() {
         return (
             <div className={styles.Cards}>
-                <Card image={iphone11} name="Iphone11" price="600 $"/>
-                <Card image={iphone12} name="Iphone12" price="800 $"/>
-                <Card image={iphone13} name="Iphone13" price="950 $"/>
-                <Card image={s21} name="S21 Ultra" price="900$"/>
-
-
-
-
+                {this.state.userPhone.map(phone=><Card key={phone.id} image={phone.image} name={phone.name} price={phone.price} />)} 
             </div>
         );
     }

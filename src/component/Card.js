@@ -17,19 +17,16 @@ class Card extends Component {
     clickUp=()=>{
         this.setState((prevState)=>({
             counter:prevState.counter + 1,
-            // counter: prevState.target.value+1
-            
         }))
     }
 
     clickDown=()=>{
         if(this.state.counter >= 1){
             this.setState((prevState)=>({
-                counter:prevState.counter -1
-               
+                counter:prevState.counter -1 
             }))
         }
-        
+ 
     }
 
     render() {
@@ -40,10 +37,10 @@ class Card extends Component {
                 <img src={image}/>
                 <h3>{name}</h3>
                 <p>{price} { counter  ? ` *${counter}=  ${ counter * Number(price.split(" ")[0])} $`  : ""  }</p>
-                <div className={Styles.counter} >
-                    <img src={up} alt="arrow" onClick={this.clickUp} />
+                <div className={Styles.counter} >    
+                <img src={down} alt="arrow" className={!counter &&  Styles.deactive } onClick={this.clickDown} />
                     <span>{counter}</span>
-                    <img src={down} alt="arrow" className={!counter &&  Styles.deactive } onClick={this.clickDown} />
+                    <img src={up} alt="arrow" onClick={this.clickUp} />
                 </div>
             </div>
         );
