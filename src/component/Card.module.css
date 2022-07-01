@@ -11,6 +11,7 @@
 .Card h3{
     color: darkblue;
     margin: 10px 30px;
+    height: 120px;
     
 }
 .Card p{
@@ -20,6 +21,10 @@
     font-size: 18px;
     margin: 10px 30px;
     padding: 2px;
+}
+.Card img{
+    height: 200px;
+    width: 300px;
 }
 .counter{
     display: flex;
@@ -36,6 +41,7 @@
 
 .counter img{
     width: 20px;
+    height: fit-content;
     cursor: pointer;
     margin: 30px;
 }

@@ -11,10 +11,17 @@
     display: flex;
   
 }
-.menu li{
+.menu li {
     padding:0px 15px;
     color: white;
     cursor: pointer;
+    
+}
+
+.menu li a{
+
+    color: white;
+    text-decoration: none;
     
 }
 .logo{
