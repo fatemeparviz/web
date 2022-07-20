@@ -23,7 +23,8 @@ class Cards extends Component {
     render() {
         return (
             <div className={styles.Cards}>
-                {this.state.userPhone.map(phone=><Card key={phone.id} image={phone.image} name={phone.name} price={phone.price} />)} 
+                {this.state.userPhone.map(phone=><Card key={phone.id} image={phone.image} name={phone.name} price={phone.price} 
+                    id={phone.id}/>)} 
             </div>
         );
     }

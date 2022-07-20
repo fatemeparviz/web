@@ -14,7 +14,7 @@ class Navbar extends Component {
                     <ul className={Styles.menu}>
                         <li><Link to="/">Home page</Link></li>
                         <li><Link to="/products">Products</Link></li>
-                        <li><Link to="/">About us</Link></li>
+                        <li><Link to="/aboutus">About us</Link></li>
                     </ul>
                     <img src={logo} className={Styles.logo} />
                 </div>

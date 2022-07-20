@@ -3,7 +3,8 @@ import Styles from "./Card.module.css"
 import up from "../images/circle-arrow-up-solid.svg"
 import down from "../images/circle-arrow-down-solid.svg"
 import { click } from '@testing-library/user-event/dist/click';
-
+import {Link} from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
 class Card extends Component {
     
@@ -30,12 +31,12 @@ class Card extends Component {
     }
 
     render() {
-        const {image, name , price} = this.props
+        const {image, name , price,id} = this.props
         let {counter}=this.state
         return (
             <div className={Styles.Card}>
                 <img src={image}/>
-                <h3>{name}</h3>
+                <h3><Link to={`/products/${id}`}>{name}</Link></h3>
                 <p>{price} { counter  ? ` *${counter}=  ${ counter * Number(price.split(" ")[0])} $`  : ""  }</p>
                 <div className={Styles.counter} >    
                 <img src={down} alt="arrow" className={counter ? " " :  Styles.deactive  } onClick={this.clickDown} />
